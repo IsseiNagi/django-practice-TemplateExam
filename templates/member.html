@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
+{% load custom_tags %}
 
 {% block title %}部員{{ block.super }}{% endblock %}
 
@@ -10,5 +11,11 @@
 </P>
 <p>
     入部日： {{ member.add_date }}
+</p>
+<p>
+    経過： {{ member.add_date|calcurate_datetime_to_now }}
+    <!-- 入部日からの経過時間を表示するには、viewで計算して渡す方法もあるが、
+    teplatetagsで変換関数を指定して、そこで計算させフィルターをかけるやり方もある。
+    今回はフィルターを使う方法で。-->
 </p>
 {% endblock %}

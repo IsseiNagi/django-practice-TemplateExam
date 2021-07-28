@@ -18,10 +18,10 @@ class Member:
 
 # 手持ちの情報でメンバーインスタンスを作成しリストにしている
 member_list = [
-    Member(0, 'Taro', '2021/07/28', 'img/taro.jpg'),
-    Member(1, 'Jiro', '2021/07/28', 'img/jiro.jpg'),
-    Member(2, 'Hanako', '2021/07/28', 'img/hanako.jpg'),
-    Member(3, 'Yoshiko', '2021/07/28', 'img/yoshiko.jpg'),
+    Member(0, 'Taro', '2020/07/28', 'img/taro.jpg'),
+    Member(1, 'Jiro', '2021/02/15', 'img/jiro.jpg'),
+    Member(2, 'Hanako', '2021/03/18', 'img/hanako.jpg'),
+    Member(3, 'Yoshiko', '2021/05/04', 'img/yoshiko.jpg'),
 ]
 
 
