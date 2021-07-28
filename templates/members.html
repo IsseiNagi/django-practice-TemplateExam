@@ -1,10 +1,14 @@
 {% extends "base.html" %}
 
-{% block title %}ホーム{{ block.super }}{% endblock %}
+{% block title %}部員一覧{{ block.super }}{% endblock %}
 
 {% block content %}
 <h3>部員一覧</h3>
 {% for member in members %}
-<p><a href="">{{ member.name }}</a></p>
+<p><a href="{% url 'app:member' id=member.member_id %}">{{ member.name }}</a></p>
+<!-- ここがポイント。urlの遷移先を指定した上で、その遷移先に、引数を渡している。
+具体的には、members_listをfor文で回して格納したmemberのmember_id要素を、idと言う引数で渡している。
+member.htmlの/以降に引数が追加されて該当ページに遷移する。-->
+
 {% endfor %}
 {% endblock %}

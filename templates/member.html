@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}部員{{ block.super }}{% endblock %}
+
+{% block content %}
+<h3>{{ member.name }}</h3>
+<P>
+    <img src="{% static member.picture_path %}" alt="" width="150x">
+</P>
+<p>
+    入部日： {{ member.add_date }}
+</p>
+{% endblock %}
